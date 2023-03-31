@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "simple-chrome-plugin-demo",
+  "version": "1.0.0",
+  "description": "简单的Chrome扩展demo",
+  "author": "JasonkayZK",
+  "icons": {
+    "16": "img/icon.png",
+    "48": "img/icon.png",
+    "128": "img/icon.png"
+  },
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content-script.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "inject.js"
+  ],
+  "background": {
+    "page": "background.html"
+  }
+}
